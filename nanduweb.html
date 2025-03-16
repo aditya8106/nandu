@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    scroll-behavior: inherit;
+    background-blend-mode: color;
+    background-image: url("bg2.jpg");
+    
+ }
+
+
+ .container {
+    display: flex;
+    margin-top: 20px ;
+ }
+
+ .sidebar {
+    height: 100vh;
+    width: 150px;
+    background: #231931;
+
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    transition: 0.3s;
+    padding-top: 60px;
+    color: rgb(122, 120, 120);
+    z-index: 1;
+ }
+
+ .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+ }
+
+ .sidebar ul li a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #40413f;
+    border-radius: 25px;
+    font-size: 20PX;
+    transition: ease-in;
+}
+
+.sidebar .closebtn {
+    font-size: 36px;
+    color: white;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.main-content {
+    margin-left: 0px;
+    transition: margin-left 0.3s;
+    padding: 20px;
+    z-index: 0;
+}
+
+
+.hamburger {
+    font-size: 30px;
+    background: none;
+    border: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: black;
+    z-index: 2; /* Make sure the hamburger icon stays on top */
+    cursor: pointer;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.main-content.shifted {
+    margin-left: 250px;
+}
+h1{
+    color: aliceblue;
+    font-size: 70PX;
+}
+p{
+
+    color: aliceblue;
+}
+img{
+    height: 500px;
+    width:500px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 250px;
+ box-shadow:  0 0 20px #b8ec7428,0 0 20px rgba(187, 231, 85, 0.496);;
+    
+}
+img:hover{
+    box-shadow: 0 0 20px #43d9fbb4,0 0 20px rgba(52, 217, 246, 0.649);
+    height: 520px;
+    width:520px;
+}
+.content{
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 250px;
+    margin-top: 200px;
+}
+.content h1{
+    color:#00c3ff;
+    font-size: 30px;
+    margin-right: 250px;
+    overflow: hidden;
+    animation: typing 2s steps(20) infinite alternate-reverse;
+    width: 20ch;
+    text-wrap: nowrap;
+}
+@keyframes typing {
+    from{
+        width: 0ch;
+    }
+    
+ }
+.content p{
+    margin-right: 30px ;
+    font-size: 25px;
+}
+.hype{
+    
+    color: #00c3ff;
+    font-weight: bold;
+
+}
+nav {
+            display: flex;
+            justify-content: left;
+            z-index: 1;
+            
+        }
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 8PX;
+            text-align: start;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border-radius: 24%;
+        }
+    .navbar a:hover {
+      font-size: 25px;
+      border-radius: 25%;
+      text-shadow: 0 0 20px #f50b0bf1,0 0 20px rgba(252, 16, 28, 0.916);
+      background-color: black;
+    }
+    .navbar a:hover::backdrop{
+        transition: all 5s ease-in-out;
+    }
+    
+
+</style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="sidebar">
+            <button class="closebtn" onclick="toggleSidebar()">&times;</button>
+            <!-- Sidebar content goes here -->
+            <ul>
+                <li><a href="#" class="icon"><i class="fas fa-home"> Home</i></a></li>
+                <li><a href="PORTFOLIO2.HTML"> <i class="fas fa-briefcase icon"> Portfolio</i></a></li>
+                <li><a href="resume.html"><i class="fas fa-file-alt icon"> Resume</i></a></li>
+                <li><a href="#"> <i class="fas fa-envelope icon"> Contact</i></a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <!-- Hamburger menu button -->
+            <button class="hamburger" onclick="toggleSidebar()">&#9776;</button>
+            
+                
+        </div>
+    </div>
+    <div><img src="mine2.jpg" alt="img"></div>
+    
+    <div class="content">
+        
+        <h1>HII, I'M<span class="hype"> <b>ADITYA...</b></span></h1>
+      <p>"Motivated <b>Full-Stack</b> Developer with proficiency in both front-end and back-end technologies, skilled in building dynamic, responsive web applications and ensuring seamless integration between user interfaces and server-side functionality."</p>
+          
+    
+    <nav class="navbar">
+        <li>
+       <a href="https://github.com/aditya8106/nandu" target="_blank">
+         <i class="fab fa-github"></i>
+       </a>
+     </li>
+
+     <li>
+       <a href="https://www.linkedin.com/in/yourusername" target="_blank">
+         <i class="fab fa-linkedin"></i>
+       </a>
+     </li>
+
+     <li>
+        <a href="https://www.facebook.com/share/1AJoaW9req/" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          
+     </li>
+     <li><a href="https://x.com/AdithyaYegiti" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+     </li>
+     <li><a href="https://www.instagram.com/__nandu__003_/?hl=en" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      </li>
+    </nav> 
+    </div>
+    
+    <script>function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        var mainContent = document.querySelector('.main-content');
+        
+        // Toggle the sidebar's visibility
+        sidebar.classList.toggle('open');
+        sidebar.classList.toggle('hide');
+        // Toggle the main content's shift
+        mainContent.classList.toggle('shifted');
+    }
+    </script>
+</body>
+</html>
