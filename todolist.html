@@ -80,6 +80,7 @@
         
         >
         <button onclick="addTotal()">Add</button>
+        <button id="Show" onclick="showAll()">Show all</button>
         <p class="list"></p>
         <div class="list2"></div>
 
@@ -95,7 +96,7 @@
                 for (let i = 0; i < todoList.length; i++) {
                     const todoObject = todoList[i];
                     const name = todoObject.name;
-                    const dueDate = todoObject.duedate;
+                    const dueDate = todoObject.duedate; 
 
                     const html = `
                         <div>${name}</div> 
@@ -117,6 +118,8 @@
 
                 if (name && dueDate) {
                     todoList.push({ name, duedate: dueDate });
+                    localStorage.setItem('todoList', JSON.stringify(todoList));
+
 
                     inputElement.value = '';
                     duedate.value = '';
@@ -132,6 +135,21 @@
 
                 displayTodoList();
             }
+            function showAll() {
+                const todoListFromStorage = localStorage.getItem('todoList');
+                if (todoListFromStorage) {
+                    const parsedTodoList = JSON.parse(todoListFromStorage);
+                    todoList.length = 0; 
+                    todoList.push(...parsedTodoList); 
+                    displayTodoList();
+                } else {
+                    alert('No tasks found in storage!');
+                }
+            }
+            window.onload = function () {
+  showAll();
+};
+
           
         </script>
     </body>
