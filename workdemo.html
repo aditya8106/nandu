@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkEase -Labor Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .dashboard-card {
+            transition: all 0.3s ease;
+        }
+        .dashboard-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d88f4c0a-e574-497b-a66f-55318aea86f0.png" alt="WorkEase logo - A blue wrench crossed with a mobile phone icon" class="h-10 w-10">
+                <span class="text-xl font-bold text-blue-900">WorkEase</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#features" class="text-gray-700 hover:text-blue-600">Features</a>
+                <a href="#how-it-works" class="text-gray-700 hover:text-blue-600">How It Works</a>
+                <a href="#pricing" class="text-gray-700 hover:text-blue-600">Pricing</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-3">
+                    <button class="login-btn text-gray-700 hover:text-blue-600 font-medium">
+                        Login
+                    </button>
+                    <button class="text-blue-600 border border-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition signup-btn">
+                        Sign Up
+                    </button>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                        Download App
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Skilled Workers On Demand</h1>
+                <p class="text-xl mb-8 text-blue-100">Book qualified electricians, plumbers, carpenters and more with just a few taps.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Find a Worker
+                    </button>
+                    <button class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition">
+                        Join as Worker
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d8d0b931-e6f7-4734-b524-51d450cc7638.png" alt="Mobile app interface showing a map with nearby service professionals marked and booking options" class="rounded-lg shadow-xl">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose WorkEase</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl service-card transition">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Instant Booking</h3>
+                    <p class="text-gray-600">Find and book skilled workers in just 60 seconds with our verified professionals.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl service-card transition">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Verified Professionals</h3>
+                    <p class="text-gray-600">All workers undergo strict identity verification and skill assessments.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl service-card transition">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-rupee-sign text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Transparent Pricing</h3>
+                    <p class="text-gray-600">No hidden charges. See the price upfront before booking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">How WorkEase Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-blue-700">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Select Service</h3>
+                    <p class="text-gray-600">Choose needed service from electricians, plumbers, carpenters etc.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-blue-700">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Pick Worker</h3>
+                    <p class="text-gray-600">View profiles, ratings and book top-rated professionals near you.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-blue-700">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Get Work Done</h3>
+                    <p class="text-gray-600">Track worker's location, chat and pay securely after service.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b57d50a-215d-4b6c-9e78-989714656287.png" alt="Step-by-step visual guide showing the WorkEase app booking process from service selection to payment" class="mx-auto rounded-lg shadow-md" style="outline: rgb(0, 0, 0) dotted 3px; outline-offset: 1px;">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Popular Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-blue-400 transition">
+                    <div class="bg-blue-100 h-40 flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/efba4159-427d-4bbf-b259-5b8fa374d34a.png" alt="Electrician working on household wiring with safety gloves and tools" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1 text-gray-800">Electrician</h3>
+                        <p class="text-gray-600 text-sm mb-3">Wiring, switches, fuse repair, electrical fittings</p>
+                        <button class="text-blue-600 text-sm font-medium">Book Now →</button>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-blue-400 transition">
+                    <div class="bg-blue-100 h-40 flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0240fcdc-2aa5-417e-b18e-3389905a6a4d.png" alt="Plumber fixing a leaky pipe under a kitchen sink with wrench" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1 text-gray-800">Plumber</h3>
+                        <p class="text-gray-600 text-sm mb-3">Pipe leaks, faucet fixes, drain cleaning, installations</p>
+                        <button class="text-blue-600 text-sm font-medium">Book Now →</button>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-blue-400 transition">
+                    <div class="bg-blue-100 h-40 flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3cc3d5ca-f914-49a8-adeb-4e9e2a60b516.png" alt="Carpenter measuring wood for furniture construction in a workshop" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1 text-gray-800">Carpenter</h3>
+                        <p class="text-gray-600 text-sm mb-3">Furniture repair, door fittings, wood polishing</p>
+                        <button class="text-blue-600 text-sm font-medium">Book Now →</button>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-blue-400 transition">
+                    <div class="bg-blue-100 h-40 flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/77e31b9d-2c15-421d-99fc-3e880e4967a8.png" alt="AC technician servicing outdoor compressor unit on a sunny day" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1 text-gray-800">AC Repair</h3>
+                        <p class="text-gray-600 text-sm mb-3">Gas refill, servicing, installation, repair</p>
+                        <button class="text-blue-600 text-sm font-medium">Book Now →</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <button class="border border-blue-600 text-blue-600 px-8 py-2 rounded-lg hover:bg-blue-50 transition">
+                    View All Services
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">What Our Users Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/755421ab-aa24-49f3-9a63-4f41176055ce.png" alt="Portrait of middle-aged man with glasses - Ramesh from Hyderabad" class="w-12 h-12 rounded-full mr-3">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Ramesh K.</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Found a reliable electrician in 10 minutes when my fuse box failed at midnight. The response time was amazing!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/91385217-d5b6-4b28-a135-b75a21ef1863.png" alt="Portrait of young woman smiling - Priya from Bangalore" class="w-12 h-12 rounded-full mr-3">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Priya M.</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"As a woman living alone, I appreciate the verified workers. The plumber I booked arrived on time and did excellent work."</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/524c8d11-5360-4410-8d22-fcd4a5923432.png" alt="Portrait of senior citizen smiling - Mr. Sharma from Delhi" class="w-12 h-12 rounded-full mr-3">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Mr. Sharma</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Simple to use app even for someone like me who isn't tech-savvy. My carpentry work was done perfectly at reasonable rates."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Join As A Professional</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-blue-100">Earn more with consistent work and grow your business with WorkEase</p>
+            <button class="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                Register As Worker
+            </button>
+        </div>
+    </section>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Available on Mobile</h2>
+                    <p class="text-gray-600 mb-8">Download the WorkEase app for faster bookings, real-time tracking, and exclusive offers.</p>
+                    <div class="flex space-x-4">
+                        <button class="bg-gray-900 text-white px-6 py-3 rounded-lg flex items-center">
+                            <i class="fab fa-apple mr-2 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-xs">Download on the</div>
+                                <div class="text-lg font-semibold">App Store</div>
+                            </div>
+                        </button>
+                        <button class="bg-gray-900 text-white px-6 py-3 rounded-lg flex items-center">
+                            <i class="fab fa-google-play mr-2 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-xs">Get it on</div>
+                                <div class="text-lg font-semibold">Google Play</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3d2888ed-12aa-4f72-84cb-a973623fe6a9.png" alt="WorkEase mobile app screens showing service selection and booking flow" class="rounded-xl shadow-2xl max-h-96">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Platform Demos</h2>
+            
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button onclick="showTab('customer-tab')" class="px-6 py-3 rounded-l-lg font-medium border border-gray-300 bg-blue-600 text-white focus:z-10">
+                        Customer View
+                    </button>
+                    <button onclick="showTab('worker-tab')" class="px-6 py-3 font-medium border-t border-b border-gray-300 bg-white text-gray-700 focus:z-10">
+                        Worker View
+                    </button>
+                    <button onclick="showTab('admin-tab')" class="px-6 py-3 rounded-r-lg font-medium border border-gray-300 bg-white text-gray-700 focus:z-10">
+                        Admin Panel
+                    </button>
+                </div>
+            </div>
+            
+            <div id="customer-tab" class="tab-content active bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4">Customer Booking Dashboard</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-medium text-gray-800 mb-3">Available Services</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                        <i class="fas fa-bolt text-blue-600"></i>
+                                    </div>
+                                    <span>Electrician</span>
+                                </div>
+                                <button class="text-blue-600 text-sm font-medium">Book Now</button>
+                            </div>
+                            <div class="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                        <i class="fas fa-tint text-blue-600"></i>
+                                    </div>
+                                    <span>Plumber</span>
+                                </div>
+                                <button class="text-blue-600 text-sm font-medium">Book Now</button>
+                            </div>
+                            <div class="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                        <i class="fas fa-hammer text-blue-600"></i>
+                                    </div>
+                                    <span>Carpenter</span>
+                                </div>
+                                <button class="text-blue-600 text-sm font-medium">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800 mb-3">Your Bookings</h4>
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <div class="divide-y divide-gray-200">
+                                <div class="p-4 flex justify-between items-center">
+                                    <div>
+                                        <p class="font-medium">Electrician - Wiring Repair</p>
+                                        <p class="text-sm text-gray-500">Status: <span class="text-green-600">Completed</span></p>
+                                    </div>
+                                    <button class="text-blue-600 text-sm font-medium">Rate & Review</button>
+                                </div>
+                                <div class="p-4 flex justify-between items-center">
+                                    <div>
+                                        <p class="font-medium">Plumber - Leak Fix</p>
+                                        <p class="text-sm text-gray-500">Status: <span class="text-yellow-600">In Progress</span></p>
+                                    </div>
+                                    <button class="text-blue-600 text-sm font-medium">Track</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0914c717-5d5c-4691-9b26-5e404bdcd958.png" alt="Customer booking dashboard showing service categories and active booking status" class="rounded-lg border border-gray-200 w-full">
+                </div>
+            </div>
+            
+            <div id="worker-tab" class="tab-content bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4">Worker Dashboard</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <p class="text-sm text-gray-600">Today's Earnings</p>
+                        <p class="text-2xl font-bold">₹1,850</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <p class="text-sm text-gray-600">Completed Jobs</p>
+                        <p class="text-2xl font-bold">3</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <p class="text-sm text-gray-600">Average Rating</p>
+                        <div class="flex items-center">
+                            <div class="text-yellow-400 flex mr-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>4.7</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-medium text-gray-800 mb-3">New Job Requests</h4>
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="divide-y divide-gray-200">
+                            <div class="p-4 flex justify-between items-center">
+                                <div>
+                                    <p class="font-medium">Electrical Wiring Repair</p>
+                                    <p class="text-sm text-gray-500">2.5 km away · ₹700</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="px-3 py-1 bg-blue-600 text-white rounded text-sm">Accept</button>
+                                    <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded text-sm">Decline</button>
+                                </div>
+                            </div>
+                            <div class="p-4 flex justify-between items-center">
+                                <div>
+                                    <p class="font-medium">Switchboard Installation</p>
+                                    <p class="text-sm text-gray-500">1.2 km away · ₹1,200</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="px-3 py-1 bg-blue-600 text-white rounded text-sm">Accept</button>
+                                    <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded text-sm">Decline</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/113e1618-b83f-4f51-8ad0-7935b36bec64.png" alt="Worker mobile app interface showing job requests and earnings dashboard" class="rounded-lg border border-gray-200 w-full">
+                </div>
+            </div>
+            
+            <div id="admin-tab" class="tab-content bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4">Admin Dashboard</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                    <div class="dashboard-card bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                        <p class="text-sm text-gray-600">Total Bookings</p>
+                        <p class="text-2xl font-bold">1,284</p>
+                        <p class="text-xs text-green-600">↑ 12% this month</p>
+                    </div>
+                    <div class="dashboard-card bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                        <p class="text-sm text-gray-600">Active Workers</p>
+                        <p class="text-2xl font-bold">346</p>
+                        <p class="text-xs text-green-600">↑ 8% this month</p>
+                    </div>
+                    <div class="dashboard-card bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                        <p class="text-sm text-gray-600">Revenue</p>
+                        <p class="text-2xl font-bold">₹28,700</p>
+                        <p class="text-xs text-green-600">↑ 21% this month</p>
+                    </div>
+                    <div class="dashboard-card bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                        <p class="text-sm text-gray-600">Pending Verifications</p>
+                        <p class="text-2xl font-bold">12</p>
+                        <p class="text-xs text-blue-600">Review now</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-medium text-gray-800 mb-3">Recent Transactions</h4>
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Transaction ID</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Service</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Amount</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#TX78490</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Plumbing - Pipe Leak</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">₹850</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Completed</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#TX78489</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">AC Servicing</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">₹1,200</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">In Progress</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#TX78488</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Electrician - Wiring</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">₹1,500</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Payment Pending</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/81ec2cdf-b768-43a7-a113-5d842d4e65d7.png" alt="Admin dashboard showing analytics charts and data tables for managing the platform" class="rounded-lg border border-gray-200 w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="border border-gray-200 rounded-lg divide-y divide-gray-200">
+                    <div class="p-6">
+                        <button class="flex justify-between items-center w-full text-left">
+                            <h3 class="text-lg font-medium text-gray-900">How do I book a service?</h3>
+                            <i class="fas fa-chevron-down text-gray-500"></i>
+                        </button>
+                        <div class="mt-2 text-gray-600">
+                            <p>Select the service you need, choose from available workers in your area, pick a convenient time slot, and confirm your booking. You'll receive worker details instantly.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <button class="flex justify-between items-center w-full text-left">
+                            <h3 class="text-lg font-medium text-gray-900">Are the workers verified?</h3>
+                            <i class="fas fa-chevron-down text-gray-500"></i>
+                        </button>
+                        <div class="mt-2 text-gray-600">
+                            <p>Yes, all workers undergo rigorous background checks, ID verification, and skill assessments before joining our platform. We also verify their tools and equipment.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <button class="flex justify-between items-center w-full text-left">
+                            <h3 class="text-lg font-medium text-gray-900">What payment methods do you accept?</h3>
+                            <i class="fas fa-chevron-down text-gray-500"></i>
+                        </button>
+                        <div class="mt-2 text-gray-600">
+                            <p>We accept all major UPI apps (PhonePe, Google Pay, PayTM), credit/debit cards, net banking and cash payments (only for services under ₹2000).</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <button class="flex justify-between items-center w-full text-left">
+                            <h3 class="text-lg font-medium text-gray-900">What if I'm not satisfied with the service?</h3>
+                            <i class="fas fa-chevron-down text-gray-500"></i>
+                        </button>
+                        <div class="mt-2 text-gray-600">
+                            <p>We offer a 48-hour service guarantee. If you're not satisfied, report the issue through the app and we'll send another worker free of charge or refund your payment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2da30b80-a398-44ff-93aa-e6e6f444802d.png" alt="WorkEase logo in white - A blue wrench crossed with a mobile phone icon" class="h-10 w-10 mr-2">
+                        <span class="text-xl font-bold">WorkEase</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Skilled labor on demand for homes and businesses across India.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Press</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">For Workers</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Become a Worker</a></li>
+                        <li><a href="#" class="hover:text-white">Worker Benefits</a></li>
+                        <li><a href="#" class="hover:text-white">Training</a></li>
+                        <li><a href="#" class="hover:text-white">Safety Guidelines</a></li>
+                        <li><a href="#" class="hover:text-white">Worker Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Community Guidelines</a></li>
+                        <li><a href="#" class="hover:text-white">Dispute Resolution</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 WorkEase Technologies. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm">Terms</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm">Privacy</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            document.getElementById(tabId).classList.add('active');
+        }
+        
+        document.querySelectorAll('footer button').forEach(button => {
+            button.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                if (answer.style.display === 'none' || !answer.style.display) {
+                    answer.style.display = 'block';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    answer.style.display = 'none';
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+
+
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-gray-800">Login to WorkEase</h3>
+                <button onclick="hideLogin()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 mb-2">Email or Mobile</label>
+                    <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Password</label>
+                    <input type="password" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                    Login
+                </button>
+            </form>
+            <div class="mt-4 text-center">
+                <p class="text-gray-600">Don't have an account? <a href="#" class="text-blue-600 hover:underline signup-btn">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const LOGIN_URL = 'https://api.workease.com/login';
+        const SIGNUP_URL = 'https://api.workease.com/signup';
+
+        async function handleLogin(e) {
+            e.preventDefault();
+            const form = e.target;
+            const response = await fetch(LOGIN_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: form.email.value,
+                    password: form.password.value
+                })
+            });
+            const data = await response.json();
+            if (response.ok) {
+                localStorage.setItem('authToken', data.token);
+                window.location.href = '/dashboard';
+            } else {
+                alert('Login failed: ' + (data.message || 'Unknown error'));
+            }
+        }
+
+        async function handleSignup(e) {
+            e.preventDefault();
+            const form = e.target;
+            const response = await fetch(SIGNUP_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: form.name.value,
+                    email: form.email.value,
+                    phone: form.phone.value,
+                    password: form.password.value,
+                    isWorker: form.isWorker.checked
+                })
+            });
+            const data = await response.json();
+            if (response.ok) {
+                alert('Account created successfully! Please login.');
+                hideSignup();
+                showLogin();
+            } else {
+                alert('Signup failed: ' + (data.message || 'Unknown error'));
+            }
+        }
+
+        function showLogin() {
+            document.getElementById('loginModal').classList.remove('hidden');
+        }
+        
+        function hideLogin() {
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        function showSignup() {
+            document.getElementById('signupModal').classList.remove('hidden');
+        }
+        
+        function hideSignup() {
+            document.getElementById('signupModal').classList.add('hidden');
+        }
+      
+        document.getElementById('loginForm').addEventListener('submit', handleLogin);
+        document.getElementById('signupForm').addEventListener('submit', handleSignup);
+        document.querySelectorAll('.login-btn').forEach(btn => btn.addEventListener('click', showLogin));
+        document.querySelectorAll('.signup-btn').forEach(btn => btn.addEventListener('click', showSignup));
+        if (localStorage.getItem('authToken')) {
+            document.querySelectorAll('.login-btn').forEach(btn => btn.style.display = 'none');
+            document.querySelectorAll('.signup-btn').forEach(btn => btn.style.display = 'none');
+        }
+    </script>
+    <div id="signupModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-gray-800">Create Account</h3>
+                <button onclick="hideSignup()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="signupForm" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 mb-2">Full Name</label>
+                    <input type="text" name="name" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Mobile Number</label>
+                    <input type="tel" name="phone" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Password</label>
+                    <input type="password" name="password" required minlength="8" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="workerCheck" name="isWorker" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                    <label for="workerCheck" class="ml-2 block text-sm text-gray-700">
+                        Register as a worker
+                    </label>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                    Create Account
+                </button>
+            </form>
+            <div class="mt-4 text-center">
+                <p class="text-gray-600">Already have an account? <a href="#" class="text-blue-600 hover:underline login-btn">Login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
